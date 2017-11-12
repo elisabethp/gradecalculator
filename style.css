@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: auto;
+}
+
+/* STRUCTURE */
+#site-container {
+    margin: auto;
+    position: relative;
+    top: 3%;
+}
+.site-col {
+    padding: 1%;
+    margin: 2%;
+}
+#left-col {
+    float: left;
+    width: 30%;
+    position: relative;
+    left: 7.5%;
+}
+#right-col {
+    float: right;
+    width: 35%;
+    position: relative;
+    right: 8%;
+    /*border: 1px solid black;*/
+
+}
+#button-container {
+    display: block;
+    text-align: center;
+    margin: 5%;
+}
+#button-container input {
+    font-size: 3em;
+    width: 140px;
+}
+
+/* GRADE ITEM */
+.grade-item {
+    display: inline-block;
+    width: 100%;
+    padding: 1% 0 1% 0;
+    margin: 1% 0 1% 0;
+    /*border-bottom: 1px solid black; */
+}
+.grade-item span { 
+    display: inline-block;
+    font-weight: bold;
+}
+.grade-item div {
+    display: inline;
+    float: right;
+    text-align: right;
+}
+.grade-item div input {
+    margin-bottom: 1%;
+    width: 100px;
+}
+    
+
+/* CSS FOR PHP */
+#error {
+    color: red;
+    padding: 3% 0 3% 0;
+}
+.hidden {
+    display: none;
+}
+
+/*RESPONSIVE CSS*/
+@media only screen and (max-width: 1450px) {
+    .site-col {
+        margin: 0;
+    }
+}
+
+/*remove the two columns and make it into a stacked layout*/
+@media only screen and (max-width: 1380px) {
+    .grade-item div {
+        float: none;
+    }
+    .grade-item span {
+        display: block;
+        margin: 1%;
+    }
+    .grade-item div span {
+        display: inline-block;
+        width: 70%;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .grade-item div input {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    #site-container {
+        margin: 5%;
+        position: static;
+    }
+    #left-col, #right-col {
+        float: none;
+        position: static;
+        width: 100%;
+    }
+    #left-col p {
+        width: 90%; 
+    }
+}
+
